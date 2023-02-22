@@ -31,7 +31,8 @@ div.top {
 
 h1.time{
     position: absolute;
-    top: 200px;
+    right: 0;
+    top: 90px;
     text-align: right; 
     color:black;
 }
