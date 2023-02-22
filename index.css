@@ -30,8 +30,8 @@ div.top {
 }
 
 h1.time{
-    position: relative;
-    top: -200px;
+    position: absolute;
+    top: 200px;
     text-align: right; 
     color:black;
 }
