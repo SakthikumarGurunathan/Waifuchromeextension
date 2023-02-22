@@ -34,23 +34,13 @@ fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
     .catch(err => console.error(err))
 // Anime quote api call
 fetch("https://animechan.vercel.app/api/random")
-    .then((response) => {
-        if(!res.ok){
-            throw Error("Something went wrong")
-        }
-        return response.json()
-    })
+    .then((response) =>  response.json())
     .then((data) => {
         document.getElementById('quote').innerHTML = `<h2>${data.anime}</h2>
                                                         <h3>${data.character}</h3>
-                                                        <h4>${data.quote}</h4>`
+     	                                               <h4>${data.quote}</h4>`
     })
-    .catch(err =>{
-        document.getElementById('quote').innerHTML = `<h2>Attack on titan</h2>
-        <h3>Levi Ackerman</h3>
-        <h4>Give up on your dreams on die</h4>`
-    })
-    ;
+   
 // Current time 
 function getCurrentTime() {
     const date = new Date()
