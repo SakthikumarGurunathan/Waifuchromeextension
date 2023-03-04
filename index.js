@@ -12,26 +12,6 @@ fetch("https://api.waifu.im/search")
 		document.getElementById("author").textContent = `By: Dodi Achmad`
     })
 
-// DogeCoin Api call
-fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
-    .then(res => {
-        if (!res.ok) {
-            throw Error("Something went wrong")
-        }
-        return res.json()
-    })
-    .then(data => {
-        document.getElementById("crypto-top").innerHTML = `
-            <img src=${data.image.small} />
-            <span>${data.name}</span>
-        `
-        document.getElementById("crypto").innerHTML += `
-            <p>🎯: $${data.market_data.current_price.usd}</p>
-            <p>👆: $${data.market_data.high_24h.usd}</p>
-            <p>👇: $${data.market_data.low_24h.usd}</p>
-        `
-    })
-    .catch(err => console.error(err))
 // Anime quote api call
 fetch("https://animechan.vercel.app/api/random")
     .then((response) =>  response.json())
