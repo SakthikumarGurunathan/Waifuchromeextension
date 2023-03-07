@@ -41,6 +41,11 @@ h1.time{
     color: black;
     font-size:16px;
 }
+#quote{
+    width: 300px;
+    color: black;
+    font-size:16px;
+}
 div#crypto {
     font-size: 1.3rem;
 }
